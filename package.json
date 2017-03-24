@@ -1,0 +1,24 @@
+{
+  "name": "HapiStaticContentServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gen/server.js",
+  "author": "Jonathan Jayet <jayet.j@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "prestart": "node_modules/typescript/bin/tsc --project src",
+    "start": "node dist/server.js",
+    "pretest": "node_modules/typescript/bin/tsc --project tests",
+    "test": "mocha test_dist/tests/*.js"
+  },
+  "dependencies": {
+    "@types/hapi": "^16.0.0",
+    "@types/inert": "^4.0.0",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "typescript": "^2.2.1"
+  }
+}

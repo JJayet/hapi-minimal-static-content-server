@@ -10,9 +10,7 @@
   },
   "scripts": {
     "prestart": "node_modules/typescript/bin/tsc --project src",
-    "start": "node dist/server.js",
-    "pretest": "node_modules/typescript/bin/tsc --project tests",
-    "test": "mocha test_dist/tests/*.js"
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "@types/hapi": "^16.0.0",

@@ -35,6 +35,7 @@ export class Server {
           handler: {
             directory: {
               path: '.',
+              lookupCompressed: true,
               defaultFilePath: 'index.html'
             }
           }

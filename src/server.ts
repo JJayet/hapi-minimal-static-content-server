@@ -18,7 +18,10 @@ export class Server {
       port: this.nodePort,
       host: process.env.HOST || '0.0.0.0',
       routes: {
-        cors: true
+        cors: true,
+        files: {
+          relativeTo: path.join(__dirname, '../public')
+        }
       }
     })
 
@@ -31,7 +34,8 @@ export class Server {
           path: '/{params*}',
           handler: {
             directory: {
-              path: path.join(__dirname, '../public')
+              path: '.',
+              defaultFilePath: 'index.html'
             }
           }
         })
